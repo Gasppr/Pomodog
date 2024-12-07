@@ -1,23 +1,48 @@
 <ng-container>
   <div class="main">
-
     <div class="pomodoro">
-      <div class="graph"></div>
-      <div class="countdown">20:29</div>
-      <div class="timer">
-        <span class="button-timer"> STOP </span>
-        <span class="button-timer"> PAUSE </span>
-      </div>
+      <div class="graph" [ngStyle]="countdown"></div>
+      <div class="countdown">{{timer}}</div>
+      <button
+        class="button-timer"
+        *ngIf="!activateControls"
+        (click)="startTimer()"
+      >
+        START
+      </button>
 
+      <button
+        class="button-timer"
+        *ngIf="activateControls && !isPaused"
+        (click)="pauseTimer()"
+      >
+        PAUSE
+      </button>
+
+      <button
+        class="button-timer"
+        *ngIf="activateControls && isPaused"
+        (click)="startTimer()"
+      >
+        RESUME
+      </button>
+
+      <button
+        class="button-timer"
+        *ngIf="activateControls"
+        (click)="stopTimer()"
+      >
+        RESTART
+      </button>
     </div>
 
     <div class="score">
-      <span>contador</span>
-
+      <span>Contador</span>
       <div class="dogCounts">
-        <img src="img/dogCount.png" alt="">
+        <div *ngFor="let i of countsDog">
+          <img src="img/dogCount.png" alt="">
+        </div>
       </div>
     </div>
-
   </div>
 </ng-container>

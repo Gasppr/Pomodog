@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class TimerComponent {
   countdown: object;
   private intervalId: any | null = null;
-  timer: number; 
+  timer: number;
   maxTime: number;
   activateControls = false;
   isPaused = false;

@@ -2,7 +2,9 @@
   <div class="main">
     <div class="pomodoro">
       <div class="graph" [ngStyle]="countdown"></div>
-      <div class="countdown">{{timer}}</div>
+
+      <div class="countdown">{{ formattedTime }}</div>
+
       <button
         class="button-timer"
         *ngIf="!activateControls"
@@ -40,7 +42,7 @@
       <span>Contador</span>
       <div class="dogCounts">
         <div *ngFor="let i of countsDog">
-          <img src="img/dogCount.png" alt="">
+          <img src="img/dogCount.png" alt="" />
         </div>
       </div>
     </div>

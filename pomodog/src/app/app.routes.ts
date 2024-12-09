@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 export const routes: Routes = [
-  {path: "pomodog" ,component: MenuComponent}
+  {path: "" ,component: MenuComponent}
 ];

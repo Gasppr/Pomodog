@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  background-color: rgb(241, 241, 241);
+  background-color: #2c2c2c;
 }
 
+hr{
+  margin-top: -15px;
+  margin-bottom: 15px;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #6a00ff;
+  margin: 1em 0;
+  padding: 0;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -11,13 +22,13 @@
 
 .header {
   height: 15vh;
-
+  color: #497ef0 ;
   display: flex;
   justify-content: space-between;
   .logo {
     margin-left: 1.25rem;
     img {
-      width:25%;
+      width: 25%;
       margin-top: 10px;
     }
     span {
@@ -28,68 +39,81 @@
     }
   }
   .buttons-join {
-
     margin-right: 2rem;
     justify-content: center;
     align-items: center;
     gap: 10%;
     width: 20%;
     display: flex;
-    ;
     button {
       height: 60%;
       width: 45%;
-      border-radius: 5%
+      border-radius: 5%;
     }
 
-    .button-register{
-      background-color: #3961ba;
-      color: white;
+    .button-register {
+      background-color: #f4f4f4;
+      box-shadow: 5px -2px 0px 0px #6a00ff;
+      color: black;
       font-weight: 500;
       font-size: 15px;
     }
-    .button-login{
-      background-color: #497ef0;
-      color: white;
+    .button-login {
+      background-color: #f4f4f4;
+      box-shadow: 5px -2px 0px 0px #6a00ff;
+      color: black;
+      font-weight: 500;
+      font-size: 15px;
     }
   }
 }
 
 .menu {
-  border: solid 2px blue;
   height: 84vh;
 
   display: flex;
   flex-direction: row;
 
-  .text-section{
+  .text-section {
     width: 60%;
-    border: solid yellow 3px;
     height: 70%;
-
-    p{
+    background-color: #497ef0;
+    color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-right: 1rem ;
+    box-shadow:8px 6px 0px 2px #6a00ff;
+    p {
+      font-family: "Arimo", serif;
+      font-weight: 600;
       padding-top: 40px;
-      font-size: 20px;
+      font-size: 22px;
+      background-color: transparent;
     }
   }
-  .forms-section{
-    border: pink 3px solid;
+  .forms-section {
     width: 40%;
+    padding-top: 10px;
+    margin: 0px 10px 10px 10px;
+    border: #497ef0 solid 2px;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-self: center;
-
-    p{
+    color: #f4f4f4;
+    box-shadow: 12px -6px 0px 5px #6a00ff;
+    p {
       align-self: center;
     }
 
-    .form-password{
+
+    .form-password {
       padding-top: 2.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-    form{
+    form {
       margin-top: 2.5rem;
       gap: 10px;
       width: 80%;
@@ -97,24 +121,27 @@
       flex-direction: column;
       justify-self: center;
 
-      input{
+      input {
         height: 5vh;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
+        background-color: #f4f4f4;
+        stroke:#497ef0;
       }
     }
 
-    a{
+    a {
       padding-left: 10%;
+      background-color: transparent;
     }
 
-    button{
+    button {
+      color: #f4f4f4;
+      background-color: #497ef0;
       align-self: center;
       margin-top: 2rem;
       width: 50%;
       height: 5rem;
     }
   }
-
-
 }
 
